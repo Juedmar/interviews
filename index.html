@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+	<link rel="icon" href="files/favicon-speak.png">
+	<link rel="stylesheet" href="files/speakingstyle.css">
+<title>Inglés Intermedio II - First Speaking Test - I, 2023</title>
+</head>
+
+<body>
+<!-- INSTRUCTIONS: body onload="alert('Click on the buttons to display random topics!')" -->
+<!-- FIRST QUESTION: body onload="myFunctionOne()" -->
+
+
+<div class="timedash" style="position: absolute; top: 10px; left: 50%; transform: translate(-50%); width: 412px; height: 25px;">📅 Date: <span id="time"></span>.</p>
+<script type="text/javascript" src="files/time-date.js"></script></div>
+
+
+<!-- STUDENT'S NAME SCRIPT -->
+<script>
+function getNewTitle() {
+  var person = prompt("ENTER NEW TITLE:", "English Language Class - Prof. Juan Edo. Méndez");
+  if (person != null) {
+    document.getElementById("new-title").innerHTML = person; } }
+</script>
+<!-- STUDENT'S NAME SCRIPT -->
+
+
+<br>
+<br>
+
+
+<p align="center"><b><font size="6px" color="yellow" id="new-title" onclick="getNewTitle()">Inglés Intermedio II - First Speaking Test - I, 2023!</font></b>
+
+<font size="6px">
+<center>
+
+<script>  
+// ENTER FULL SCREEN
+        function activate(ele) { if (ele.requestFullscreen) { ele.requestFullscreen(); } }
+
+// EXIT FULL SCREEN
+        function deactivate() { if (document.exitFullscreen) { document.exitFullscreen(); } }
+</script>
+
+<div class="buttons">
+
+<button id="ClearButton" type="button" onclick="document.getElementById('resultone').style.color = '#FFFF44'; document.getElementById('resultpairs').style.color = '#FFFF44'; ">🧽 Clear ✏️</button>
+<button onclick="myFunctionOne();" id="selectone">↓ 👤 Individual topic ↓</button>
+<button onclick="myFunctionPairs();" id="selectpairs">↓ 👥 Pair work ↓</button>
+<button type="button" onclick="document.getElementById('resultone').style.fontSize = '26px'; document.getElementById('resultpairs').style.fontSize = '26px'">-S</button>
+<button type="button" onclick="document.getElementById('resultone').style.fontSize = '32px'; document.getElementById('resultpairs').style.fontSize = '32px'">M</button>
+<button type="button" onclick="document.getElementById('resultone').style.fontSize = '40px'; document.getElementById('resultpairs').style.fontSize = '40px'">+L</button>
+<button type="button" onclick="document.getElementById('resultone').style.fontSize = '50px'; document.getElementById('resultpairs').style.fontSize = '50px'">+XL</button>
+<button onclick="activate(document.documentElement);"><small>&#x2752;</small> Fullscreen</button>
+<button onclick="deactivate();">Minimize <font color="red"><small>&#x2716;</small></font></button>
+<br>
+<iframe name="Timers" id="Timers" title="Countdown Timer" src="timers/index.html" height="22" width="800" style="border: 2px solid darkgray; border-radius: 5px 5px;"></iframe>
+</div>
+
+<audio id="audio" src="media/audio.mp3" preload="auto">Your browser does not support the <code>audio</code> element.</audio>
+<audio id="clearsound" src="media/erase.mp3" preload="auto">Your browser does not support the <code>audio</code> element.</audio>
+<script type="text/javascript" src="files/audio-play-script.js"></script>
+
+<p id="resultone"></p><script type="text/javascript" src="questions/individual.js"></script>
+<p id="resultpairs"></p></div><script type="text/javascript" src="questions/pairwork.js"></script>
+
+</font>
+</center>
+
+<br>
+<br>
+
+<div id="juedmar" style="position: fixed; bottom: 12px; left: 40px;">
+<font color="darkgray" size="2px">👨‍🏫 Designed by Juan Edo. Méndez (juan.mendez@upla.cl)
+</div>
+
+<div id="rubric" style="position: fixed; bottom: 12px; right: 40px;">
+<font color="darkgray" size="2px"><a href="https://juedmar.github.io/assessment/" target="Rubric" style="text-decoration: none; color: darkgray;">Open rubric!</a>📊
+</div>
+
+<div class="alert" id="alert">
+  <span class="closebtn" onclick="this.parentElement.style.display='none'; killAlert();">&times;</span>
+  👇 Click on the buttons to display random topics! &nbsp;&nbsp;&nbsp;&nbsp;
+</div>
+
+<script>
+function killAlert() {
+	if (typeof(Storage) !== "undefined") {
+	  localStorage.setItem("alert", "killed");
+	  document.getElementById("alert").style.display = "none"; } }
+
+if (localStorage.getItem("alert") === "killed") {
+  document.getElementById("alert").style.display = "none"; }
+</script>
+
+</body>
+</html>
