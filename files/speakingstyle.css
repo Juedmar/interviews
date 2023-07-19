@@ -16,13 +16,17 @@ p.the_date   {color: yellow;}
 
 a { text-decoration: none; }
 
+@font-face {
+    font-family: 'DigitalClock'; /*a name to be used later*/
+    src: url('orbitron.ttf'); /*URL to font*/
+}
+
 /* TIME DASH */
 .timedash {
 	color: white;
 	font-size: 16px;
 	text-align: center;
-	font-family: 'Orbitron';
-	src: url(orbitron.ttf);
+	font-family: 'DigitalClock';
 	font-weight: normal;
 	background-color: #468562; /* Deep Aquamarine */
 	background: conic-gradient(from 90deg at 1px 1px,#49B649 90deg,#197B00 0)  8px 4px/12px 12px; /* Lime Green */
