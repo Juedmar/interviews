@@ -16,9 +16,12 @@ function myFunctionOne() {
   idArray [11] = "Talk about the <u>last time you went out</u> with a friend or family member. You should say <u>where you went, what you did</u> and why."
   idArray [12] = "Talk about the <u>last time you went on holiday</u>. You should say <u>who you went with, where you went, what you did</u> and if you enjoyed it."
 
+  idArray [13] = "🗣️ Talk about an <u>interesting / funny anecdote that you had</u> in the past. You should describe the situation, how you felt and why you felt that way."
+  idArray [14] = "🗣️ Talk about <u>a movie or book that you liked</u>. You should describe the movie or book and say why you liked it."
+
 // SET THE NUMBER OF QUESTIONS ON THE SECOND LINE BELOW!
   document.getElementById("selectone").onclick = myFunctionOne;
-  randomParagraph = Math.floor(Math.random()*12);
+  randomParagraph = Math.floor(Math.random()*14);
 
 // THIS LINE DISPLAYS THE RANDOM QUESTIONS [DO NOT CHANGE]!
   document.getElementById("resultone").innerHTML = idArray[randomParagraph + 1];
