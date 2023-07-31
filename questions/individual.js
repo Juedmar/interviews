@@ -3,22 +3,25 @@
 // MAKE SURE TO START AND FINISH WITH QUOTATION SIGNS.
 function myFunctionOne() {
   idArray = new Array()
-  idArray [1] = "Talk about <u>all the things that are happening right now</u> in your life, including your family or personal life, education, sports, music or hobbies, etc. Also, say why you like (or dislike) doing them."
-  idArray [2] = "Imagine you are in the middle of the city, in a busy downtown area. <u>Describe all the things happening in your imaginary city</u> at the current moment. You can use your imagination."
-  idArray [3] = "<u>Describe your bedroom in detail</u>, including all the things you can see there, where they are, the colors and sizes, the number of things, etc. Remember to use correct prepositions."
-  idArray [4] = "<u>Describe your living room in detail</u>, including all the things you can see there, where they are, the colors and sizes, the number of things, etc. Remember to use correct prepositions."
-  idArray [5] = "<u>Describe your kitchen in detail</u>, including all the things you can see, where they are, the colors and sizes, the number of things, etc. Remember to use correct prepositions."
-  idArray [6] = "<u>Talk about your home and family chores & obligations</u>, including all the things you have to do, the frequency, why you like (or dislike) doing them. What happens if you don't do them?"
-  idArray [7] = "<u>Talk about any house </u>chores people with pets need to do</u> to keep their house clean. Mention all the things they have to do, how frequently they must do them. Why is it necessary to do them?"
-  idArray [8] = "<u>Talk about all your favorite food</u>. Mention why you like it, when and where you eat it, how often you eat it, etc. What are the main ingredients? How do you prepare it?"
-  idArray [9] = "<u>Talk about all the delicious snacks you like</u>. Mention what they are, why you like them, how often you eat them, the amounts, etc. In what sizes, formats or containers do they come?"
-  idArray [10] = "<u>Talk about all the vegetables you like or dislike</u>, including their names, why you like or dislike them, how often you eat them, etc. How do they taste? In what format or containers do they come?"
-  idArray [11] = "<u>Describe the meals or dishes you eat when you are very hungry</u>, including the names, the types of meal, why you like them, how often you eat them, the main ingredients, etc."
-  idArray [12] = "<u>Talk about your pastimes & hobbies</u>. Mention what activities you like doing, when you do them, how frequent, why you like them, etc. Do you do them by yourself, or with your friends?"
+  idArray [1] = "Practice: What is your full name?"
+  idArray [2] = "Practice: How are you doing today?"
+  idArray [3] = "Practice: What is your favorite color?"
+  idArray [4] = "Practice: What is your e-mail address?"
+  idArray [5] = "Practice: What is your favorite season?"
+  idArray [6] = "Practice: How often do you go shopping?"
+  idArray [7] = "Practice: How do you spell your last name?"
+  idArray [8] = "Practice: What is your favorite food or drink?"
+  idArray [9] = "Practice: What is your favorite day of the week?"
+  idArray [10] = "Practice: What is your favorite month of the year?"
+  idArray [11] = "Practice: What time do you get up in the morning?"
+  idArray [12] = "Practice: What is your favorite sport? Do you practice often?"
+  idArray [13] = "Practice: What do you usually do during long weekeneds or holidays?"
+  idArray [14] = "Practice: Do you have any hobbies? When did you start doing them?"
+  idArray [15] = "Notice: These are practice questions only. There are no interviews today!"
 
 // SET THE NUMBER OF QUESTIONS ON THE SECOND LINE BELOW!
   document.getElementById("selectone").onclick = myFunctionOne;
-  randomParagraph = Math.floor(Math.random()*12);
+  randomParagraph = Math.floor(Math.random()*15);
 
 // THIS LINE DISPLAYS THE RANDOM QUESTIONS [DO NOT CHANGE]!
   document.getElementById("resultone").innerHTML = idArray[randomParagraph + 1];
