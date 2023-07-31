@@ -3,30 +3,22 @@
 // MAKE SURE TO START AND FINISH WITH QUOTATION SIGNS.
 function myFunctionOne() {
   idArray = new Array()
-  idArray [1] = "<u>Talk about your bedroom or living room.</u> Mention all the things you can see there, where they are, if you like them, the colors & shapes, the amount of objects, etc. Remember to use the correct prepositions."
-  idArray [2] = "<u>Describe your kitchen in detail.</u> Mention all the things you can see there, where they are, if you like them, the colors & shapes, the amount of objects, etc. Remember to use the correct prepositions."
-  idArray [3] = "Talk about the <u>home improvements you need to do around your home</u>. Mention the things you should repair, how frequently you should do them, how long they have been pending. Can you do them yourself?"
-  idArray [4] = "What <u>cleaning job do you & your family do</u> to keep your house looking its best? Mention the chores, supplies, times & frequency, etc."
-  idArray [5] = "If you could buy the house of your dreams, <u>what features would you like to have in your ideal house / apartment?</u> Swimming pool, basketball court, barbecue area, a private cinema? Why?"
-  idArray [6] = "Choose <u>one housekeeping activity you will have to do every day & another you won’t ever have to do again</u> for the rest of your life. Explain your choices."
-  idArray [7] = "Talk about all the <u>things you used to do when you were in high school</u>. Mention the activities, the places, the people, the food, hobbies, frequency, etc."
+  idArray [1] = "Talk about <u>all the things that are happening right now</u> in your life, including your family or personal life, education, sports, music or hobbies, etc. Also, say why you like (or dislike) doing them."
+  idArray [2] = "Imagine you are in the middle of the city, in a busy downtown area. <u>Describe all the things happening in your imaginary city</u> at the current moment. You can use your imagination."
+  idArray [3] = "<u>Describe your bedroom in detail</u>, including all the things you can see there, where they are, the colors and sizes, the number of things, etc. Remember to use correct prepositions."
+  idArray [4] = "<u>Describe your living room in detail</u>, including all the things you can see there, where they are, the colors and sizes, the number of things, etc. Remember to use correct prepositions."
+  idArray [5] = "<u>Describe your kitchen in detail</u>, including all the things you can see, where they are, the colors and sizes, the number of things, etc. Remember to use correct prepositions."
+  idArray [6] = "<u>Talk about your home and family chores & obligations</u>, including all the things you have to do, the frequency, why you like (or dislike) doing them. What happens if you don't do them?"
+  idArray [7] = "<u>Talk about any house </u>chores people with pets need to do</u> to keep their house clean. Mention all the things they have to do, how frequently they must do them. Why is it necessary to do them?"
   idArray [8] = "<u>Talk about all your favorite food</u>. Mention why you like it, when and where you eat it, how often you eat it, etc. What are the main ingredients? How do you prepare it?"
-  idArray [9] = "<u>Talk about all the delicious snacks you know</u>. Mention what they are, why you like it, how often you eat it, etc. What are the main ingredients? In what format or containers do they come?"
-  idArray [10] = "<u>Talk about all the vegetables you know</u>. Mention the names, why you like them, how often you eat them, etc. What are the main ingredients? In what format or containers do they come?"
-  idArray [11] = "Talk about the <u>prepared meals or dishes you eat when you are very hungry</u>. Mention the names, why you like them, what the main ingredients are, if you eat them for breakfast, lunch or dinner, etc."
-
-  idArray [12] = "- Talk about <u>what you were doing at 4pm yesterday</u> (Include the past continuous in your answer)."
-  idArray [13] = "- Talk about <u>what you were doing at 9pm yesterday</u> (Include the past continuous in your answer)."
-  idArray [14] = "- Before you started your degree in multilingual tourism management, <u>had you considered studying something else</u>? (Include the Past Perfect in your answer)."
-  idArray [15] = "- How do you feel <u>when you practice your favorite hobby</u> after a long and tiring day? Include: modifiers with adjectives, and extreme adjectives."
-  idArray [16] = "- How do you feel <u>when you have to give a class presentation</u>? Include: modifiers with adjectives, and extreme adjectives."
-  idArray [17] = "- How do you feel <u>when you receive a high grade for a difficult exam</u>? Include: modifiers with adjectives, and extreme adjectives."
-  idArray [18] = "- Before you started your degree in multilingual tourism management, <u>how much English had you learned</u>? (Include the Past Perfect in your answer)."
-  idArray [19] = "- Before you started your degree in multilingual tourism management, <u>had you travelled much in Chile</u>? (Include the Past Perfect in your answer)."
+  idArray [9] = "<u>Talk about all the delicious snacks you like</u>. Mention what they are, why you like them, how often you eat them, the amounts, etc. In what sizes, formats or containers do they come?"
+  idArray [10] = "<u>Talk about all the vegetables you like or dislike</u>, including their names, why you like or dislike them, how often you eat them, etc. How do they taste? In what format or containers do they come?"
+  idArray [11] = "<u>Describe the meals or dishes you eat when you are very hungry</u>, including the names, the types of meal, why you like them, how often you eat them, the main ingredients, etc."
+  idArray [12] = "<u>Talk about your pastimes & hobbies</u>. Mention what activities you like doing, when you do them, how frequent, why you like them, etc. Do you do them by yourself, or with your friends?"
 
 // SET THE NUMBER OF QUESTIONS ON THE SECOND LINE BELOW!
   document.getElementById("selectone").onclick = myFunctionOne;
-  randomParagraph = Math.floor(Math.random()*19);
+  randomParagraph = Math.floor(Math.random()*12);
 
 // THIS LINE DISPLAYS THE RANDOM QUESTIONS [DO NOT CHANGE]!
   document.getElementById("resultone").innerHTML = idArray[randomParagraph + 1];
@@ -34,5 +26,4 @@ function myFunctionOne() {
 // THIS LINE TOGGLES BETWEEN INDIVIDUAL & PAIR WORK TOPICS [DO NOT CHANGE]!
   document.getElementById('resultone').style.color = '#000000';
   document.getElementById('resultpairs').style.color = '#FFFF44';
-
 }
