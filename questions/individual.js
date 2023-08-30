@@ -3,25 +3,19 @@
 // MAKE SURE TO START AND FINISH WITH QUOTATION SIGNS.
 function myFunctionOne() {
   idArray = new Array()
-  idArray [1] = "Practice: What is your full name?"
-  idArray [2] = "Practice: How are you doing today?"
-  idArray [3] = "Practice: What is your favorite color?"
-  idArray [4] = "Practice: What is your e-mail address?"
-  idArray [5] = "Practice: What is your favorite season?"
-  idArray [6] = "Practice: How often do you go shopping?"
-  idArray [7] = "Practice: How do you spell your last name?"
-  idArray [8] = "Practice: What is your favorite food or drink?"
-  idArray [9] = "Practice: What is your favorite day of the week?"
-  idArray [10] = "Practice: What is your favorite month of the year?"
-  idArray [11] = "Practice: What time do you get up in the morning?"
-  idArray [12] = "Practice: What is your favorite sport? Do you practice often?"
-  idArray [13] = "Practice: What do you usually do during long weekeneds or holidays?"
-  idArray [14] = "Practice: Do you have any hobbies? When did you start doing them?"
-  idArray [15] = "Notice: These are practice questions only. There are no interviews today!"
+  idArray [1] = "Think about someone you know well and <u>describe this person, including their physical appearance, their personality</u> and a little bit of their daily routine."
+  idArray [2] = "<u>Describe your favorite sports / pastime activities you like doing</u>. Talk about the activities, the frequency, the gear, the locations and people with whom you do them."
+  idArray [3] = "<u>Describe your favorite holiday celebration</u>. Talk about the event and the why you celebrate it, the things you do, if you visit a special locations, the food & drinks, the music, etc."
+  idArray [4] = "Think about two people in your family. <u>Describe and compare all their different characteristics</u>, including physical features, personalities and routines, etc… including how they are different from each other."
+// Peter's Questions:
+  idArray [5] = "Talk about some activities you have been doing recently in your free time."
+  idArray [6] = "Talk about a memorable holiday you have had."
+  idArray [7] = "What advice can you give to someone with a cold?"
+  idArray [8] = "Compare a beach holiday with a skiing holiday."
 
 // SET THE NUMBER OF QUESTIONS ON THE SECOND LINE BELOW!
   document.getElementById("selectone").onclick = myFunctionOne;
-  randomParagraph = Math.floor(Math.random()*15);
+  randomParagraph = Math.floor(Math.random()*8);
 
 // THIS LINE DISPLAYS THE RANDOM QUESTIONS [DO NOT CHANGE]!
   document.getElementById("resultone").innerHTML = idArray[randomParagraph + 1];
