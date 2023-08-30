@@ -15,9 +15,9 @@ function myFunctionPairs() {
   idArray [8] = "You were planning to have a small house party together, but none of your friends come. Discuss <u>what must/may have happened</u> as the possible reasons (problems, accidents, weather, other events, etc)."
 
 // Peter's Tasks:
-  idArray [7] = "Talk to each other about the last time you went on a long vacation, including when / where this was, & who you were with. Take turns to ask / answer questions & follow-up questions."
-  idArray [9] = "Imagine you both don’t feel very well today. Tell each other exactly how you feel, and give each other some advice to get better."
-  idArray [10] = "Discuss what type of holiday you prefer, a cultural holiday or a beach holiday. Compare them."
+  idArray [9] = "Talk to each other about the last time you went on a long vacation, including when / where this was, & who you were with. Take turns to ask / answer questions & follow-up questions."
+  idArray [10] = "Imagine you both don’t feel very well today. Tell each other exactly how you feel, and give each other some advice to get better."
+  idArray [11] = "Discuss what type of holiday you prefer, a cultural holiday or a beach holiday. Compare them."
 
 // SET THE NUMBER OF QUESTIONS ON THE SECOND LINE BELOW!
   document.getElementById("selectpairs").onclick = myFunctionPairs;
