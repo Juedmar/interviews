@@ -7,7 +7,7 @@ function myFunctionOne() {
 // UNIT 2:
 
   idArray [1] = "Talk about <u>some activities you have been doing recently in your free time</u>, including the hobbies you've been doing, the food you've been eating, the movies/series you've been watching, the vide games you've been playing, etc."
-  idArray [2] = "<u>Describe your favorite sports, pastime activities or or hobbies you like doing</u>, including the activities, the frequency, the gear, the locations and people with whom you do them."
+  idArray [2] = "<u>Describe your favorite sports, pastime activities or hobbies you like doing</u>, including the activities, the frequency, the gear, the locations and people with whom you do them."
   idArray [3] = "Talk about <u>the sport activity, exercise & hobbies you did when you were in high school</u>, including those you liked & didn't like so much, for how long you exercised, where you went to do them, etc."
 
 // UNIT 3:
