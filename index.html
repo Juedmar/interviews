@@ -213,7 +213,12 @@ if (input == 'individual') {
  let whichSingle = 'single0' + random
  if (random >= 10) { whichSingle = 'single' + random }
  singleElement.innerHTML = document.getElementById(whichSingle).value
- if (singleCount == 0) {singleElement.innerHTML = "Individual questions!" }
+ if (singleCount == 0) {
+  singleElement.innerHTML = "Individual questions are empty!"
+  setTimeout(function() { singleElement.innerHTML = "Opening questions now!" }, 2000)
+  setTimeout(function() { document.getElementById('questions').style.display = 'block' }, 4000)
+  setTimeout(function() { singleElement.innerHTML = "Individual questions!" }, 5000)
+  }
  singleElement.style.color = "black"
  doubleElement.style.color = "#FFFF44"
  }
@@ -224,7 +229,12 @@ if (input == 'pairwork') {
  let whichDouble = 'double0' + random
  if (random >= 10) { whichDouble = 'double' + random }
  doubleElement.innerHTML = document.getElementById(whichDouble).value
- if (doubleCount == 0) {doubleElement.innerHTML = "Pairwork questions!" }
+ if (doubleCount == 0) {
+  doubleElement.innerHTML = "Pairwork questions are empty!"
+  setTimeout(function() { doubleElement.innerHTML = "Opening questions now!" }, 2000)
+  setTimeout(function() { document.getElementById('questions').style.display = 'block' }, 4000)
+  setTimeout(function() { doubleElement.innerHTML = "Pairwork questions!" }, 5000)
+  }
  singleElement.style.color = "#FFFF44"
  doubleElement.style.color = "black"
  }
