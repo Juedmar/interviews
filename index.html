@@ -2,75 +2,54 @@
 <html>
 <head>
 <meta charset="utf-8">
-	<link rel="icon" href="files/favicon-speak.png">
-	<link rel="stylesheet" href="files/speakingstyle.css">
+ <link rel="icon" href="images/favicon-speak.png">
+ <link rel="stylesheet" href="style/speakingstyle.css">
 <title>Speaking Assessment Interviews - Prof. Juan Edo. Méndez</title>
 </head>
 
-<body>
-<!-- INSTRUCTIONS: body onload="alert('Click on the buttons to display random topics!')" -->
-<!-- FIRST QUESTION: body onload="myFunctionOne()" -->
-
-
-<div class="timedash" style="position: absolute; top: 10px; left: 50%; transform: translate(-50%); width: 412px; height: 25px;">📅 Date: <span id="time"></span>.</p>
-<script type="text/javascript" src="files/time-date.js"></script></div>
-
-
-<!-- STUDENT'S NAME SCRIPT -->
-<script>
-function getNewTitle() {
-  var person = prompt("ENTER NEW TITLE:", "Speaking Assessment Interviews - Prof. Juan Edo. Méndez");
-  if (person != null) {
-    document.getElementById("new-title").innerHTML = person; } }
-</script>
-<!-- STUDENT'S NAME SCRIPT -->
-
-
-<br>
-<br>
-<br>
-
-
-<p align="center"><b><font size="6px" color="yellow" id="new-title" onclick="getNewTitle()">Speaking Assessment Interviews - Prof. Juan Edo. Méndez</font></b>
-
-<font size="6px">
-<center>
-
-<script>  
-// ENTER FULL SCREEN
-        function activate(ele) { if (ele.requestFullscreen) { ele.requestFullscreen(); } }
-
-// EXIT FULL SCREEN
-        function deactivate() { if (document.exitFullscreen) { document.exitFullscreen(); } }
-</script>
-
-<div class="buttons">
-
-<button id="ClearButton" type="button" onclick="document.getElementById('resultone').style.color = '#FFFF44'; document.getElementById('resultpairs').style.color = '#FFFF44'; ">🧽 Clear ✏️</button>
-<button onclick="myFunctionOne();" id="selectone">↓ 👤 Individual topic ↓</button>
-<button onclick="myFunctionPairs();" id="selectpairs">↓ 👥 Pair work ↓</button>
-<button type="button" onclick="document.getElementById('resultone').style.fontSize = '26px'; document.getElementById('resultpairs').style.fontSize = '26px'">-S</button>
-<button type="button" onclick="document.getElementById('resultone').style.fontSize = '32px'; document.getElementById('resultpairs').style.fontSize = '32px'">M</button>
-<button type="button" onclick="document.getElementById('resultone').style.fontSize = '40px'; document.getElementById('resultpairs').style.fontSize = '40px'">+L</button>
-<button type="button" onclick="document.getElementById('resultone').style.fontSize = '50px'; document.getElementById('resultpairs').style.fontSize = '50px'">+XL</button>
-<button onclick="activate(document.documentElement);"><small>&#x2752;</small> Fullscreen</button>
-<button onclick="deactivate();">Minimize <font color="red"><small>&#x2716;</small></font></button>
-<br>
-<iframe name="Timers" id="Timers" title="Countdown Timer" src="timers/index.html" height="22" width="800" style="border: 2px solid darkgray; border-radius: 5px 5px;"></iframe>
-</div>
-
 <audio id="audio" src="media/audio.mp3" preload="auto">Your browser does not support the <code>audio</code> element.</audio>
 <audio id="clearsound" src="media/erase.mp3" preload="auto">Your browser does not support the <code>audio</code> element.</audio>
-<script type="text/javascript" src="files/audio-play-script.js"></script>
 
-<p id="resultone"></p><script type="text/javascript" src="questions/individual.js"></script>
-<p id="resultpairs"></p></div><script type="text/javascript" src="questions/pairwork.js"></script>
+<body>
 
-</font>
-</center>
+<div class="timedash" style="position: absolute; top: 10px; left: 50%; transform: translate(-50%); width: 412px; height: 25px;">
+📅 Date: <span id="time"></span>.
+</div>
 
 <br>
 <br>
+<br>
+
+<p id="new-title" title="Click to change!" style="font-size: 30px; font-weight: bold; text-align: center; color: yellow; margin-top: 3px;" onclick="getNewTitle()">
+<b>Speaking Assessment Interviews - Prof. Juan Edo. Méndez</b>
+</p>
+
+
+<div class="buttons" style="text-align: center;">
+<font size="6px">
+
+ <button id="ClearButton" type="button" onclick="document.getElementById('resultone').style.color = '#FFFF44'; document.getElementById('resultpairs').style.color = '#FFFF44'; ">🧽 Hide ✏️</button>
+
+ <button onclick="getQuestions('individual')" id="selectone">↓ 👤 Individual topic ↓</button>
+ <button onclick="getQuestions('pairwork')" id="selectpairs">↓ 👥 Pair work ↓</button>
+ <button onclick="document.getElementById('questions').style.display = 'block'">↓ Edit questions ❓ ↓</button>
+
+ <button type="button" onclick="document.getElementById('resultone').style.fontSize = '26px'; document.getElementById('resultpairs').style.fontSize = '26px'">-S</button>
+ <button type="button" onclick="document.getElementById('resultone').style.fontSize = '32px'; document.getElementById('resultpairs').style.fontSize = '32px'">M</button>
+ <button type="button" onclick="document.getElementById('resultone').style.fontSize = '40px'; document.getElementById('resultpairs').style.fontSize = '40px'">+L</button>
+ <button type="button" onclick="document.getElementById('resultone').style.fontSize = '50px'; document.getElementById('resultpairs').style.fontSize = '50px'">+XL</button>
+
+ <button onclick="activate(document.documentElement)">⬆️</button>
+ <button onclick="deactivate()">⬇️</button>
+ <br>
+ <iframe name="Timers" id="Timers" title="Countdown Timer" src="timers/index.html" height="22" width="75%" style="border: 2px solid darkgray; border-radius: 5px 5px;"></iframe>
+
+ <center>
+ <p id="resultone">Individual questions!</p>
+ <p id="resultpairs">Pairwork questions!</p>
+ </center>
+
+</div>
 
 <div id="juedmar" style="position: fixed; bottom: 12px; left: 40px;">
 <font color="darkgray" size="2px">👨‍🏫 Designed by Juan Edo. Méndez (juan.mendez@upla.cl)
@@ -81,19 +60,212 @@ function getNewTitle() {
 </div>
 
 <div class="alert" id="alert">
-  <span class="closebtn" onclick="this.parentElement.style.display='none'; killAlert();">&times;</span>
-  👇 Click on the buttons to display random topics! &nbsp;&nbsp;&nbsp;&nbsp;
+ <span class="closebtn" onclick="this.parentElement.style.display='none'; killAlert();">&times;</span>
+ 👇 Click on the buttons to display random topics! &nbsp;&nbsp;&nbsp;&nbsp;
 </div>
 
-<script>
-function killAlert() {
-	if (typeof(Storage) !== "undefined") {
-	  localStorage.setItem("alert", "killed");
-	  document.getElementById("alert").style.display = "none"; } }
+<div id="questions" class="question-wrapper" style="display: none;">
+<span class="close-questions-button" onclick="document.getElementById('questions').style.display = 'none'">X</span>
+ <div style="display: flex; width: 100%; margin: auto; padding: 6px; gap: 12px; align-items: center; color: black;">
 
-if (localStorage.getItem("alert") === "killed") {
-  document.getElementById("alert").style.display = "none"; }
-</script>
+  <div class="questions-column">
+   <b>INDIVIDUAL QUESTIONS:</b> <span style="cursor: pointer;" onclick="deleteSingle()">🗑️</span>
+   <ol style="padding-left: 24px;">
+   <li><input type="text" id="single01" class="individual-input" placeholder="Question N°1"></li>
+   <li><input type="text" id="single02" class="individual-input" placeholder="Question N°2"></li>
+   <li><input type="text" id="single03" class="individual-input" placeholder="Question N°3"></li>
+   <li><input type="text" id="single04" class="individual-input" placeholder="Question N°4"></li>
+   <li><input type="text" id="single05" class="individual-input" placeholder="Question N°5"></li>
+   <li><input type="text" id="single06" class="individual-input" placeholder="Question N°6"></li>
+   <li><input type="text" id="single07" class="individual-input" placeholder="Question N°7"></li>
+   <li><input type="text" id="single08" class="individual-input" placeholder="Question N°8"></li>
+   <li><input type="text" id="single09" class="individual-input" placeholder="Question N°9"></li>
+   <li><input type="text" id="single10" class="individual-input" placeholder="Question N°10"></li>
+   <li><input type="text" id="single11" class="individual-input" placeholder="Question N°11"></li>
+   <li><input type="text" id="single12" class="individual-input" placeholder="Question N°12"></li>
+   <li><input type="text" id="single13" class="individual-input" placeholder="Question N°13"></li>
+   <li><input type="text" id="single14" class="individual-input" placeholder="Question N°14"></li>
+   <li><input type="text" id="single15" class="individual-input" placeholder="Question N°15"></li>
+   <li><input type="text" id="single16" class="individual-input" placeholder="Question N°16"></li>
+   <li><input type="text" id="single17" class="individual-input" placeholder="Question N°17"></li>
+   <li><input type="text" id="single18" class="individual-input" placeholder="Question N°18"></li>
+   <li><input type="text" id="single19" class="individual-input" placeholder="Question N°19"></li>
+   <li><input type="text" id="single20" class="individual-input" placeholder="Question N°20"></li>
+   </ol>
+  </div>
+
+  <div class="questions-column">
+   <b>PAIRWORK QUESTIONS:</b> <span style="cursor: pointer;" onclick="deleteDouble()">🗑️</span>
+   <ol style="padding-left: 24px;">
+   <li><input type="text" id="double01" class="pairwork-input" placeholder="Pairwork N°1"></li>
+   <li><input type="text" id="double02" class="pairwork-input" placeholder="Pairwork N°2"></li>
+   <li><input type="text" id="double03" class="pairwork-input" placeholder="Pairwork N°3"></li>
+   <li><input type="text" id="double04" class="pairwork-input" placeholder="Pairwork N°4"></li>
+   <li><input type="text" id="double05" class="pairwork-input" placeholder="Pairwork N°5"></li>
+   <li><input type="text" id="double06" class="pairwork-input" placeholder="Pairwork N°6"></li>
+   <li><input type="text" id="double07" class="pairwork-input" placeholder="Pairwork N°7"></li>
+   <li><input type="text" id="double08" class="pairwork-input" placeholder="Pairwork N°8"></li>
+   <li><input type="text" id="double09" class="pairwork-input" placeholder="Pairwork N°9"></li>
+   <li><input type="text" id="double10" class="pairwork-input" placeholder="Pairwork N°10"></li>
+   <li><input type="text" id="double11" class="pairwork-input" placeholder="Pairwork N°11"></li>
+   <li><input type="text" id="double12" class="pairwork-input" placeholder="Pairwork N°12"></li>
+   <li><input type="text" id="double13" class="pairwork-input" placeholder="Pairwork N°13"></li>
+   <li><input type="text" id="double14" class="pairwork-input" placeholder="Pairwork N°14"></li>
+   <li><input type="text" id="double15" class="pairwork-input" placeholder="Pairwork N°15"></li>
+   <li><input type="text" id="double16" class="pairwork-input" placeholder="Pairwork N°16"></li>
+   <li><input type="text" id="double17" class="pairwork-input" placeholder="Pairwork N°17"></li>
+   <li><input type="text" id="double18" class="pairwork-input" placeholder="Pairwork N°18"></li>
+   <li><input type="text" id="double19" class="pairwork-input" placeholder="Pairwork N°19"></li>
+   <li><input type="text" id="double20" class="pairwork-input" placeholder="Pairwork N°20"></li>
+   </ol>
+  </div>
+
+ </div>
+</div>
 
 </body>
+
+
+<!-- SCRIPTS -->
+<!-- SCRIPTS -->
+<!-- SCRIPTS -->
+
+<!- SAVE FUNCTION ->
+<!- CONNECTED TO JQUERY WITH THE FOLLOWING SCRIPT ->
+<script src="files/jquery-3.7.1.slim.js"></script>
+<!- https://stackoverflow.com/questions/39155511/html-save-text-in-textarea ->
+<!- https://jquery.com/download/ ->
+
+<script type="text/javascript">
+window.onbeforeunload = function() {
+     $('input').each(function(){
+        var id = $(this).attr('id');
+        var value = $(this).val();
+       localStorage.setItem(id, value);
+    });
+}
+window.onload = function() {
+    $('input').each(function(){
+       var id = $(this).attr('id');
+       var text2 = localStorage.getItem(id);
+       if (text2 !== null) $('#'+id).val(text2);
+    });
+
+// CALLING OTHER FUNCTIONS!
+pasteQuestions()
+
+}
+</script>
+
+<script type="text/javascript" src="files/time-date.js"></script>
+<script type="text/javascript" src="files/audio-play-script.js"></script>
+
+<!-- STUDENT'S NAME SCRIPT -->
+<script type="text/javascript">
+function getNewTitle() {
+ var person = prompt("ENTER NEW TITLE:", "Speaking Assessment Interviews - Prof. Juan Edo. Méndez");
+ if (person != null) { document.getElementById("new-title").innerHTML = person; }
+}
+</script>
+
+<!-- FULL SCREEN SCRIPT -->
+<script type="text/javascript">
+ function activate(ele) { if (ele.requestFullscreen) { ele.requestFullscreen() } }
+ function deactivate() { if (document.exitFullscreen) { document.exitFullscreen() } }
+</script>
+
+<!-- WARNING LABEL SCRIPT -->
+<script type="text/javascript">
+function killAlert() {
+if (typeof(Storage) !== "undefined") {
+ localStorage.setItem("alert", "killed")
+ document.getElementById("alert").style.display = "none"
+ }
+}
+if (localStorage.getItem("alert") === "killed") { document.getElementById("alert").style.display = "none" }
+</script>
+
+<!-- QUESTIONS SCRIPT -->
+<script type="text/javascript">
+function getQuestions(input) {
+
+// NUMBER VALUE FOR COUNTING ENTERED QUESTIONS!
+let singleCount = 0
+let doubleCount = 0
+
+// COUNT INDIVIDUAL QUESTIONS
+let Individual = document.querySelectorAll("input.individual-input")
+for(let singleTask of Individual)
+if (singleTask.value !== "") {singleCount++}
+
+// COUNT PAIRWORK QUESTIONS
+let Pairwork = document.querySelectorAll("input.pairwork-input")
+for(let pairworkTask of Pairwork)
+if (pairworkTask.value !== "") {doubleCount++}
+
+// ELEMENT TO DISPLAY QUESTIONS
+let singleElement = document.getElementById("resultone")
+let doubleElement = document.getElementById("resultpairs")
+
+// DISPLAYING INDIVIDUAL QUESTIONS!
+if (input == 'individual') {
+ let random = Math.floor(Math.random() * singleCount) + 1
+ let whichSingle = 'single0' + random
+ if (random >= 10) { whichSingle = 'single' + random }
+ singleElement.innerHTML = document.getElementById(whichSingle).value
+ if (singleCount == 0) {singleElement.innerHTML = "Individual questions!" }
+ singleElement.style.color = "black"
+ doubleElement.style.color = "#FFFF44"
+ }
+
+// DISPLAYING PAIRWORK QUESTIONS!
+if (input == 'pairwork') {
+ let random = Math.floor(Math.random() * doubleCount) + 1
+ let whichDouble = 'double0' + random
+ if (random >= 10) { whichDouble = 'double' + random }
+ doubleElement.innerHTML = document.getElementById(whichDouble).value
+ if (doubleCount == 0) {doubleElement.innerHTML = "Pairwork questions!" }
+ singleElement.style.color = "#FFFF44"
+ doubleElement.style.color = "black"
+ }
+}
+
+// DELETE INDIVIDUAL QUESTIONS
+function deleteSingle () {
+let Individual = document.querySelectorAll("input.individual-input")
+for(let singleTask of Individual) { singleTask.value = "" }
+}
+
+// DELETE PAIRWORK QUESTIONS
+function deleteDouble () {
+let Pairwork = document.querySelectorAll("input.pairwork-input")
+for(let doubleTask of Pairwork) { doubleTask.value = "" }
+}
+
+
+// BREAKING THE CLIPBOARD DATA INTO THE DIFFERENT INPUTS!
+function pasteQuestions() {
+// GETTING AN ARRAY WITH ALL THE INPUTS!
+ let singleFields = document.getElementsByClassName('individual-input');
+ let doubleFields = document.getElementsByClassName('pairwork-input');
+
+// Assign input 0 a listener for the onpaste event
+singleFields[0].onpaste = function(event) {
+ event.preventDefault()
+ let allValues = event.clipboardData.getData('Text').split(/\r?\n/)  // Split data on newline!
+ for(var i = 0; i < allValues.length; i++) { singleFields[i].value = allValues[i] } // Cycling the values
+ }
+
+// Assign input 0 a listener for the onpaste event
+doubleFields[0].onpaste = function(event) {
+ event.preventDefault()
+ let allValues = event.clipboardData.getData('Text').split(/\r?\n/)  // Split data on newline!
+ for(var i = 0; i < allValues.length; i++) { doubleFields[i].value = allValues[i] } // Cycling the values
+ }
+
+}
+</script>
+
+
+
 </html>

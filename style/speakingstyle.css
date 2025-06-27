@@ -1,0 +1,162 @@
+
+body {	background-color: #0F56A2;
+	font-family: Verdana, Helvetica, sans-serif;
+	background-image: url("../images/blueprint.jpg");
+	background-size: cover;
+ 	background-repeat: no-repeat;
+ 	background-attachment: fixed; }
+
+h1   {color: yellow;}
+
+h4   {color: yellow;}
+
+p    {color: white;}
+
+p.the_date   {color: yellow;}
+
+a { text-decoration: none; }
+
+@font-face {
+    font-family: 'DigitalClock'; /*a name to be used later*/
+    src: url('orbitron.ttf'); /*URL to font*/
+}
+
+/* TIME DASH */
+.timedash {
+	color: white;
+	font-size: 16px;
+	text-align: center;
+	font-family: 'DigitalClock';
+	font-weight: normal;
+	background-color: #196619; /* Lime Green #32CD32 - Deep Aquamarine #468562 */
+	background: conic-gradient(from 90deg at 1px 1px,#196619 90deg,#197B00 0)  8px 4px/12px 12px; /* Lime Green */
+	opacity: .85;
+	border: 2px solid #242424;
+	border-radius: 5px 5px; }
+
+/* BUTTONS */
+#selectone {
+ background-color: #DD0000;
+ border: 3px solid darkgray;
+ border-radius: 5px 5px;
+ color: white;
+ padding: 5px 5px;
+ text-align: center;
+ text-decoration: none;
+ display: inline-block;
+ font-size: 15px;
+ transition: background-color 0.6s;
+ cursor: pointer;
+}
+
+#selectone:hover { background-color: #FF0000; color: white; }
+#selectone:active { background-color: orange; color: white; }
+
+#selectpairs {
+ background-color: #DD0000;
+ border: 3px solid darkgray;
+ border-radius: 5px 5px;
+ color: white;
+ padding: 5px 5px;
+ text-align: center;
+ text-decoration: none;
+ display: inline-block;
+ font-size: 15px;
+ transition: background-color 0.6s;
+ cursor: pointer;
+}
+
+#selectpairs:hover { background-color: #FF0000; color: white; }
+#selectpairs:active { background-color: orange; color: white; }
+
+button {
+ background-color: #0F56A2;
+ border: 3px solid darkgray;
+ border-radius: 5px 5px;
+ color: white;
+ padding: 5px 5px;
+ text-align: center;
+ text-decoration: none;
+ display: inline-block;
+ font-size: 15px;
+ transition: background-color 0.6s;
+ cursor: pointer;
+}
+
+button:hover { background-color: #3176BC; color: white; }
+button:active { background-color: red; color: white; }
+
+/* QUESTION STYLE */
+#resultone	{width: 88%; background-color:#FFFF44; border: 3px solid white; border-radius: 20px 20px; border-size:5px; padding: 5px; color: black;}
+#resultpairs	{width: 88%; background-color:#FFFF44; border: 3px solid white; border-radius: 20px 20px; border-size:5px; padding: 5px; color: black;}
+font-family {Verdana; Tahoma;}
+
+/* INSTRUCTIONS ALERT */
+.alert { position: absolute; top: 8%; right: 36%; padding: 18px; background-color: #DD0000; color: white; border: solid 4px #000; border-radius: 12px; }
+.closebtn { position: absolute; top: 4px; right: 8px; margin-left: 15px; color: white; font-weight: bold; font-size: 24px; line-height: 16px; cursor: pointer; transition: 0.3s; }
+.closebtn:hover { color: black; }
+
+/* SCROLLBAR */
+::-webkit-scrollbar { width: 10px; }
+::-webkit-scrollbar-track { background: #0F56A2; }
+::-webkit-scrollbar-thumb { background: #888; }
+::-webkit-scrollbar-thumb:hover { background: #555; }
+
+
+/* QUESTIONS */
+
+.close-questions-button {
+ position: absolute;
+ top: -12px; right: -12px;
+ width: 18px;
+ background: lightyellow;
+ text-align: center;
+ font-size: 16px;
+ font-family: Verdana;
+ font-weight: bold;
+ cursor: pointer;
+ border: 2px solid #2266AA;
+ border-radius: 6px;
+ padding: 3px;
+}
+.close-questions-button:hover { background: yellow; color: red; }
+
+.question-wrapper {
+ position: absolute;
+ top: 42px;
+ left: 50%;
+ transform: translateX(-50%);
+ display: flex;
+ width: 96%;
+ height: max-content;
+ margin: auto;
+ background: #134FA3FA;
+ padding: 6px;
+ border: 3px solid #2266AA;
+ border-radius: 12px;
+}
+
+.questions-column {
+ width: 47%;
+ background: white;
+ text-align: center;
+ border: 2px solid gray;
+ border-radius: 6px;
+ padding: 12px;
+}
+
+.individual-input {
+ width: 95%;
+ margin: 5px;
+ background: lightyellow;
+ border: 1px solid gray;
+ border-radius: 3px;
+}
+
+.pairwork-input {
+ width: 95%;
+ margin: 5px;
+ background: lightyellow;
+ border: 1px solid gray;
+ border-radius: 3px;
+}

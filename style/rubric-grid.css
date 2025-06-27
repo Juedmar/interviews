@@ -1,0 +1,206 @@
+
+body {	background-color: #333333;
+	font-family: Verdana, Helvetica, sans-serif;
+	background-image: url("../media/gray-tiles.jpg");
+	background-repeat: repeat;
+	background: conic-gradient(from 90deg at 1px 1px,#333 90deg,#223 0) 1px 1px/4px 4px;
+	overflow-y: scroll;
+	overflow: auto; }
+
+p {	text-align:center;
+	font-family: Verdana, Tahoma;
+	family: Verdana, Tahoma;
+	font-color:#005B9A;
+	color:#005B9A;
+	font-size: 12px; }
+
+p.footnotes {text-align: left; font-size: 12px; }
+a {text-decoration: none; color:#0191C8; font-size: 12; }
+
+
+/* GRID LAYOUT CONTAINER */
+
+.grid-container {
+	display: grid;
+	grid-template-columns: 95px auto auto auto auto auto auto auto 85px;
+	grid-template-areas:
+	 'title		title title title title title title title title'
+	 'criteria	crit1 crit2 crit3 crit4 crit5 crit6 crit7 points'
+	 'grades	grad1 grad2 grad3 grad4 grad5 grad6 grad7 points'
+	 'percent	perc1 perc2 perc3 perc4 perc5 perc6 perc7 points'
+	 'content	cont1 cont2 cont3 cont4 cont5 cont6 cont7 xcont'
+	 'vocabulary	voca1 voca2 voca3 voca4 voca5 voca6 voca7 xvoca'
+	 'pronunciation pron1 pron2 pron3 pron4 pron5 pron6 pron7 xpron'
+	 'fluency	flue1 flue2 flue3 flue4 flue5 flue6 flue7 xflue'
+	 'grammar	gram1 gram2 gram3 gram4 gram5 gram6 gram7 xgram'
+	 'foot		foot foot foot foot foot foot label1 sum'
+	 'design	design printout	name name final final label2 multiply';
+	gap: 0px;
+	background-color: white;
+	border: 5px solid darkgray;
+	border-radius: 18px 18px;
+	padding: 10px;
+	margin-top: 12px;
+	margin-left: 6px;
+	margin-right: 6px; }
+
+.grid-container > div {
+	font-size: 12px;
+	text-align: left;
+	font-family: Verdana, Tahoma;
+	color: #005B9A;
+	padding: 3px;
+	border: 1px dashed darkgray;
+	border-style: hidden hidden dashed dashed; /* top right bottom left */
+	word-break: break-word;
+	cursor: pointer; }
+				/* Cornflower Blue */
+.title { grid-area: title; background-color: #6495ED; border-radius: 10px 10px 0px 0px; }
+
+.criteria { grid-area: criteria; background-color: #FFFD66; }
+	.crit1 { grid-area: crit1; background-color: #FFFFBB; }
+	.crit2 { grid-area: crit2; background-color: #FFFFBB; }
+	.crit3 { grid-area: crit3; background-color: #FFFFBB; }
+	.crit4 { grid-area: crit4; background-color: #FFFFBB; }
+	.crit5 { grid-area: crit5; background-color: #FFFFDD; }
+	.crit6 { grid-area: crit6; background-color: #FFFFDD; }
+	.crit7 { grid-area: crit7; background-color: #FFFFDD; }
+.points { grid-area: points; background-color: #FFFD66; }
+
+.grades { grid-area: grades; background-color: #FFFD66; }
+	.grad1 { grid-area: grad1; background-color: #FFFFBB; }
+	.grad2 { grid-area: grad2; background-color: #FFFFBB; }
+	.grad3 { grid-area: grad3; background-color: #FFFFBB; }
+	.grad4 { grid-area: grad4; background-color: #FFFFBB; }
+	.grad5 { grid-area: grad5; background-color: #FFFFDD; }
+	.grad6 { grid-area: grad6; background-color: #FFFFDD; }
+	.grad7 { grid-area: grad7; background-color: #FFFFDD; }
+
+.percent { grid-area: percent; background-color: #FFFD66; }
+	.perc1 { grid-area: perc1; background-color: #FFFFBB; }
+	.perc2 { grid-area: perc2; background-color: #FFFFBB; }
+	.perc3 { grid-area: perc3; background-color: #FFFFBB; }
+	.perc4 { grid-area: perc4; background-color: #FFFFBB; }
+	.perc5 { grid-area: perc5; background-color: #FFFFDD; }
+	.perc6 { grid-area: perc6; background-color: #FFFFDD; }
+	.perc7 { grid-area: perc7; background-color: #FFFFDD; }
+
+.content { grid-area: content; background-color: #FFFFBB; }
+.cont1:hover, .cont2:hover, .cont3:hover, .cont4:hover { background-color: #A7C7E7; transition: background-color 0.9s; }
+.cont5:hover, .cont6:hover, .cont7:hover { background-color: #F2A2E8; transition: background-color 0.9s; }
+.xcont { grid.class: .xcont; background-color: #FFFFBB; }
+
+.vocabulary { grid-area: vocabulary; background-color: #FFFFBB; }
+.voca1:hover, .voca2:hover, .voca3:hover, .voca4:hover { background-color: #A7C7E7; transition: background-color 0.9s; }
+.voca5:hover, .voca6:hover, .voca7:hover { background-color: #F2A2E8; transition: background-color 0.9s; }
+.xvoca { grid-area: xvoca; background-color: #FFFFBB; }
+
+.pronunciation { grid-area: pronunciation; background-color: #FFFFBB; }
+.pron1:hover, .pron2:hover, .pron3:hover, .pron4:hover { background-color: #A7C7E7; transition: background-color 0.9s; }
+.pron5:hover, .pron6:hover, .pron7:hover { background-color: #F2A2E8; transition: background-color 0.9s; }
+.xpron { grid-area: xpron; background-color: #FFFFBB; }
+
+.fluency { grid-area: fluency; background-color: #FFFFBB; }
+.flue1:hover, .flue2:hover, .flue3:hover, .flue4:hover { background-color: #A7C7E7; transition: background-color 0.9s; }
+.flue5:hover, .flue6:hover, .flue7:hover { background-color: #F2A2E8; transition: background-color 0.9s; }
+.xflue { grid-area: xflue; background-color: #FFFFBB; }
+
+.grammar { grid-area: grammar; background-color: #FFFFBB; border-radius: 0px 0px 0px 10px; }
+.gram1:hover, .gram2:hover, .gram3:hover, .gram4:hover { background-color: #A7C7E7; transition: background-color 0.9s; }
+.gram5:hover, .gram6:hover, .gram7:hover { background-color: #F2A2E8; transition: background-color 0.9s; }
+.xgram { grid-area: xgram; background-color: #FFFFBB; }
+
+.foot { grid-area: foot; align-self: center;}
+.label1 { grid-area: label1; align-self: center;}
+.sum { grid-area: sum; background-color: #FFFD66; }
+
+.design { grid-area: design; align-self: center;}
+.printout { grid-area: printout; align-self: center;}
+.name { grid-area: name; align-self: top;}
+.final { grid-area: final; align-self: center;}
+.label2 { grid-area: label2; align-self: center;}
+.multiply { grid-area: multiply; background-color: #FFFD66; border-radius: 0px 0px 10px 10px; }
+
+/* EVALUATION SCRIPT POINT BOXES */
+input[type=number] {
+	font-size: 24px;
+	text-align: center;
+	width: 100%;
+	padding: 10px 0px 10px 10px;
+	margin-top: 5px;
+	margin-bottom: 0px;
+	box-sizing: border-box;
+	border: 3px solid darkgray;
+	border-radius: 6px;
+	cursor: copy; }
+
+input.TheResults { cursor: not-allowed; } /* FINAL EVALUATION BOXES */
+
+input.FinalGrade {
+	font-size: 24px;
+	text-align: center;
+	width: 85px;
+	height: 50px;
+	margin: 0px;
+	padding: 0px 0px 0px 12px;
+	cursor: not-allowed;
+	background-color: lightyellow; }
+
+/* BUTTON */
+#result {
+	visibility: hidden; /* HIDDING THE -GRADE- BUTTON */
+	background-color: #DD0000;
+	border: 3px solid darkgray;
+	border-radius: 4px 4px;
+	color: white;
+	padding: 4px 4px;
+	text-align: center;
+	text-decoration: none;
+	display: inline-block;
+	font-size: 20px;
+	cursor: pointer; }
+
+#result:hover { background-color: #FF0000; color: white; }
+#result:active { background-color: orange; color: white; }
+
+/* SCROLLBAR STYLE */
+::-webkit-scrollbar { width: 8px; }
+::-webkit-scrollbar-track { background: #555; box-shadow: inset 0 0 6px black; }
+::-webkit-scrollbar-thumb { background: #555; outline: 1px solid slategrey; border-radius: 3px 3px;}
+::-webkit-scrollbar-thumb:hover { background: #888; }
+
+/* RUBRIC POP-UP */
+.popup { position: absolute; top: 102px; left: 385px; padding: 6px 16px 12px 20px; background-color: #DD0000; color: white; border: solid 4px #000; border-radius: 12px; }
+.closebtn { position: absolute; top: 4px; right: 8px; margin-left: 15px; color: white; font-weight: bold; font-size: 24px; line-height: 16px; cursor: pointer; transition: 0.3s; }
+.closebtn:hover { color: black; }
+
+/* AUDIO TOGGLE SWITCH */
+.toggle { position: relative;
+	display : inline-block;
+	width : 32px;
+	height : 17px;
+	background-color: #DD0000;
+	border-radius: 30px;
+	border: 2px solid gray;
+	cursor: pointer; }
+
+.toggle:after { content: '';
+	position: absolute;
+	width: 18px;
+	height: 18px;
+	border-radius: 50%;
+	background-color: gray;
+	top: 0px;
+	left: 0px;
+	transition: all 0.5s;
+	cursor: pointer; }	/* After slide changes */
+
+.checkbox { display : none; } /* Checkbox vanished */
+.checkbox:checked + .toggle::after { left : 15px; }
+.checkbox:checked + .toggle { background-color: green; } /* Checkbox checked toggle label bg color */
+
+/* PRINT AREA */
+	@media print {
+	body { background-image: none; background-color: #FFFFFF; zoom: 78%;}
+	div { page-break-inside: avoid; }
+	}
