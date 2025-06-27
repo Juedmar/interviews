@@ -59,9 +59,10 @@
 <font color="darkgray" size="2px"><a href="https://juedmar.github.io/assessment/" target="Rubric" style="text-decoration: none; color: darkgray;">Open rubric!</a>📊
 </div>
 
-<div class="alert" id="alert">
+<div class="alertInstructions" id="alertInstructions">
  <span class="closebtn" onclick="this.parentElement.style.display='none'; killAlert();">&times;</span>
- 👇 Click on the buttons to display random topics! &nbsp;&nbsp;&nbsp;&nbsp;
+ 1. Click "Edit..." and paste your interview questions 😉!<br>
+ 2. 👇 Click the buttons to perform randomized interview!
 </div>
 
 <div id="questions" class="question-wrapper" style="display: none;">
@@ -178,11 +179,11 @@ function getNewTitle() {
 <script type="text/javascript">
 function killAlert() {
 if (typeof(Storage) !== "undefined") {
- localStorage.setItem("alert", "killed")
- document.getElementById("alert").style.display = "none"
+ localStorage.setItem("alertInstructions", "killed")
+ document.getElementById("alertInstructions").style.display = "none"
  }
 }
-if (localStorage.getItem("alert") === "killed") { document.getElementById("alert").style.display = "none" }
+if (localStorage.getItem("alertInstructions") === "killed") { document.getElementById("alertInstructions").style.display = "none" }
 </script>
 
 <!-- QUESTIONS SCRIPT -->
@@ -217,7 +218,7 @@ if (input == 'individual') {
   singleElement.innerHTML = "Individual questions are empty!"
   setTimeout(function() { singleElement.innerHTML = "Opening questions now!" }, 2000)
   setTimeout(function() { document.getElementById('questions').style.display = 'block' }, 4000)
-  setTimeout(function() { singleElement.innerHTML = "Individual questions!" }, 5000)
+  setTimeout(function() { singleElement.innerHTML = "Individual questions!" }, 4500)
   }
  singleElement.style.color = "black"
  doubleElement.style.color = "#FFFF44"
@@ -233,7 +234,7 @@ if (input == 'pairwork') {
   doubleElement.innerHTML = "Pairwork questions are empty!"
   setTimeout(function() { doubleElement.innerHTML = "Opening questions now!" }, 2000)
   setTimeout(function() { document.getElementById('questions').style.display = 'block' }, 4000)
-  setTimeout(function() { doubleElement.innerHTML = "Pairwork questions!" }, 5000)
+  setTimeout(function() { doubleElement.innerHTML = "Pairwork questions!" }, 4500)
   }
  singleElement.style.color = "#FFFF44"
  doubleElement.style.color = "black"

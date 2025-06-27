@@ -92,7 +92,7 @@ button:active { background-color: red; color: white; }
 font-family {Verdana; Tahoma;}
 
 /* INSTRUCTIONS ALERT */
-.alert { position: absolute; top: 8%; right: 36%; padding: 18px; background-color: #DD0000; color: white; border: solid 4px #000; border-radius: 12px; }
+.alertInstructions { position: absolute; top: 10%; left: 50%; transform: translateX(-50%); width: max-content; padding: 18px; background-color: #DD0000; color: white; border: solid 4px #000; border-radius: 12px; padding-right: 36px; }
 .closebtn { position: absolute; top: 4px; right: 8px; margin-left: 15px; color: white; font-weight: bold; font-size: 24px; line-height: 16px; cursor: pointer; transition: 0.3s; }
 .closebtn:hover { color: black; }
 
