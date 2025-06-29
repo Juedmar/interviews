@@ -12,15 +12,12 @@
 
 <body>
 
-<div class="timedash" style="position: absolute; top: 10px; left: 50%; transform: translate(-50%); width: 412px; height: 25px;">
-📅 Date: <span id="time"></span>.
-</div>
+<!-- BLueprint Bakcgrouns -->
+<div class="blueprint">
 
 <br>
-<br>
-<br>
 
-<p id="new-title" title="Click to change!" style="font-size: 30px; font-weight: bold; text-align: center; color: yellow; margin-top: 3px;" onclick="getNewTitle()">
+<p id="new-title" class="new-title" title="Click to change!" onclick="getNewTitle()">
 <b>Speaking Assessment Interviews - Prof. Juan Edo. Méndez</b>
 </p>
 
@@ -49,6 +46,17 @@
  <p id="resultpairs">Pairwork questions!</p>
  </center>
 
+ <div class="template-questions">Templates:
+  <span class="template-icons" title="Present Simple Questions" onclick="presentSimple()">⌚</span>
+  <span class="template-icons" title="Past Simple Questions" onclick="pastSimple()">📅</span>
+  <span class="template-icons" title="Food & Meals Questions" onclick="foodQuestions()">🍔</span>
+   <!-- HOVERING TOOLTIP -->
+   <div class="tooltiptext">Add sample questions!
+    <div class="tooltip-arrow"></div>
+   </div>
+
+ </div>
+
 </div>
 
 <div id="juedmar" style="position: fixed; bottom: 12px; left: 40px;">
@@ -62,7 +70,7 @@
 <div class="alertInstructions" id="alertInstructions">
  <span class="closebtn" onclick="this.parentElement.style.display='none'; killAlert();">&times;</span>
  1. Click "Edit..." and paste your interview questions 😉!<br>
- 2. 👇 Click the buttons to perform randomized interview!
+ 2. 👇 Click the buttons to display randomized questions!
 </div>
 
 <div id="questions" class="question-wrapper" style="display: none;">
@@ -122,7 +130,17 @@
   </div>
 
  </div>
+
 </div>
+
+<div class="timedash" style="position: absolute; bottom: 10px; left: 50%; transform: translate(-50%); width: 412px; height: 25px;">
+📅 Date: <span id="time"></span>.
+</div>
+
+
+<!-- End of Blueprint-->
+<div>
+
 
 </body>
 
@@ -241,39 +259,171 @@ if (input == 'pairwork') {
  }
 }
 
+
+function presentSimple() {
+// DELETE PREVIOUS STUFF!
+deleteSingle()
+deleteDouble()
+
+// PRINT "READY TO GO"!
+document.getElementById("resultone").style.color = "black"
+document.getElementById("resultpairs").style.color = "black"
+
+// OPENING QUESTION WINDOW!
+document.getElementById("resultone").innerHTML = "Adding Present Simple questions!"
+setTimeout(function() { document.getElementById("questions").style.display = "block" }, 1000)
+
+// ADDING INDIVIDUAL QUESTIONS!
+setTimeout(function() { document.getElementById("single01").value = "What app do you use the most? Why? Explain." }, 2100)
+setTimeout(function() { document.getElementById("single02").value = "What do you usually do to relax after class?" }, 2200)
+setTimeout(function() { document.getElementById("single03").value = "What time do you usually wake up? Why? Explain." }, 2300)
+setTimeout(function() { document.getElementById("single04").value = "What do you do when you are bored and have free time?" }, 2400)
+setTimeout(function() { document.getElementById("single05").value = "How often do you go shopping? What do you usually buy?" }, 2500)
+setTimeout(function() { document.getElementById("single06").value = "What do you eat or drink when it is really hot outside?" }, 2600)
+setTimeout(function() { document.getElementById("single07").value = "What do you usually eat for lunch? Do you eat any dessert?" }, 2700)
+setTimeout(function() { document.getElementById("single08").value = "What TV shows/social media channels do you watch regularly?" }, 2800)
+setTimeout(function() { document.getElementById("single09").value = "What do you usually do during long weekeneds or on vacation?" }, 2900)
+setTimeout(function() { document.getElementById("single10").value = "What are some hobbies or activities you enjoy doing? Explain." }, 3000)
+setTimeout(function() { document.getElementById("single11").value = "What is your favorite day of the week? What do you usually do that day?" }, 3100)
+setTimeout(function() { document.getElementById("single12").value = "Talk about your daily routine, including all the things you do & the frequency." }, 3200)
+setTimeout(function() { document.getElementById("single13").value = "Talk about your hobbies/activities you do more often, including the times & frequency, etc." }, 3300)
+setTimeout(function() { document.getElementById("single14").value = "Talk about the chores / housework you do during the day, including the times & frequency, etc." }, 3400)
+setTimeout(function() { document.getElementById("single15").value = "Talk about your hobbies and the activities you like doing, the frequency, why you like them, etc." }, 3500)
+// ERASE THE REST!
+document.getElementById("single16").value = ""
+document.getElementById("single17").value = ""
+document.getElementById("single18").value = ""
+document.getElementById("single19").value = ""
+document.getElementById("single20").value = ""
+
+// RESETTING QUESTION WINDOW!
+setTimeout(function() { document.getElementById("questions").style.display = "none" }, 4000)
+setTimeout(function() { document.getElementById("resultone").innerHTML = "Present Simple questions ready (individial)!" }, 4500)
+setTimeout(function() { document.getElementById("resultpairs").innerHTML = "Pairwork is still empty!" }, 5000)
+setTimeout(function() { document.getElementById("alertInstructions").style.display = "block" }, 5500)
+}
+
+
+function pastSimple() {
+// DELETE PREVIOUS STUFF!
+deleteSingle()
+deleteDouble()
+
+// PRINT "READY TO GO"!
+document.getElementById("resultone").style.color = "black"
+document.getElementById("resultpairs").style.color = "black"
+
+// OPENING QUESTION WINDOW!
+document.getElementById("resultone").innerHTML = "Adding Past Simple questions!"
+setTimeout(function() { document.getElementById("questions").style.display = "block" }, 1000)
+
+// ADDING INDIVIDUAL QUESTIONS!
+setTimeout(function() { document.getElementById("single01").value = "What did you do yesterday?" }, 2100)
+setTimeout(function() { document.getElementById("single02").value = "What did you do last weekend?" }, 2200)
+setTimeout(function() { document.getElementById("single03").value = "What did you do this morning?" }, 2300)
+setTimeout(function() { document.getElementById("single04").value = "What was the last book you read?" }, 2400)
+setTimeout(function() { document.getElementById("single05").value = "What was the last game you played?" }, 2500)
+setTimeout(function() { document.getElementById("single06").value = "Were you a well behaved child? Explain." }, 2600)
+setTimeout(function() { document.getElementById("single07").value = "Where did you grow up? What was it like?" }, 2700)
+setTimeout(function() { document.getElementById("single08").value = "When was the last time you rode a bicycle?" }, 2800)
+setTimeout(function() { document.getElementById("single09").value = "What was a funny movie you watched recently?" }, 2900)
+setTimeout(function() { document.getElementById("single10").value = "What was the last movie you saw? How was it?" }, 3000)
+setTimeout(function() { document.getElementById("single11").value = "Who did you hang out with last? What did you do together?" }, 3100)
+setTimeout(function() { document.getElementById("single12").value = "Talk about <u>the last time you went on holiday</u>, including when / where this was, & who you were with." }, 3200)
+setTimeout(function() { document.getElementById("single13").value = "Talk about <u>what you did last summer / last winter vacation</u>, including the activities, places, people, etc." }, 3300)
+setTimeout(function() { document.getElementById("single14").value = "Talk about the <u>last time you went on holiday</u>, including where you went, what you did and if you enjoyed it." }, 3400)
+setTimeout(function() { document.getElementById("single15").value = "Talk about the <u>last time you went out</u> with a friend or family member, including where you went, what you did and why." }, 3500)
+// ERASE THE REST!
+document.getElementById("single16").value = ""
+document.getElementById("single17").value = ""
+document.getElementById("single18").value = ""
+document.getElementById("single19").value = ""
+document.getElementById("single20").value = ""
+
+// RESETTING QUESTION WINDOW!
+setTimeout(function() { document.getElementById("questions").style.display = "none" }, 4000)
+setTimeout(function() { document.getElementById("resultone").innerHTML = "Past Simple questions ready (individial)!" }, 4500)
+setTimeout(function() { document.getElementById("resultpairs").innerHTML = "Pairwork is still empty!" }, 5000)
+setTimeout(function() { document.getElementById("alertInstructions").style.display = "block" }, 5500)
+}
+
+
+function foodQuestions() {
+// DELETE PREVIOUS STUFF!
+deleteSingle()
+deleteDouble()
+
+// PRINT "READY TO GO"!
+document.getElementById("resultone").style.color = "black"
+document.getElementById("resultpairs").style.color = "black"
+
+// OPENING QUESTION WINDOW!
+document.getElementById("resultone").innerHTML = "Adding Food & Cooking questions!"
+setTimeout(function() { document.getElementById("questions").style.display = "block" }, 1000)
+
+// ADDING INDIVIDUAL QUESTIONS!
+setTimeout(function() { document.getElementById("single01").value = "<u>Describe your kitchen in detail</u>, including all the things you can see, where they are, the colors and sizes, the number of things, etc." }, 2100)
+setTimeout(function() { document.getElementById("single02").value = "<u>Talk about all your favorite food</u>. Mention why you like it, when and where you eat it, how often you eat it, etc. What are the main ingredients? How do you prepare it?" }, 2200)
+setTimeout(function() { document.getElementById("single03").value = "<u>Talk about all the delicious snacks you like</u>. Mention what they are, why you like them, how often you eat them, the amounts, etc. In what sizes, formats or containers do they come?" }, 2300)
+setTimeout(function() { document.getElementById("single04").value = "<u>Talk about all the vegetables you like or dislike</u>, including their names, why you like or dislike them, how often you eat them, etc. How do they taste? In what format or containers do they come?" }, 2400)
+setTimeout(function() { document.getElementById("single05").value = "Talk about <u>your shopping and food preferences</u>, including how often you go shopping, the stores you like and things that you normally buy." }, 2500)
+setTimeout(function() { document.getElementById("single06").value = "Talk about <u>going to the supermarket</u>, including the things you most frequently buy at the store & if you like grocery shopping. Why? Why not?" }, 2600)
+setTimeout(function() { document.getElementById("single07").value = "Talk about <u>your favorite food & restaurants</u>, including the things you like eating, how often you prepare them, special recipes & dishes that you like." }, 2700)
+setTimeout(function() { document.getElementById("single08").value = "Talk about <u>your eating habits and guilty pleasures</u>, either things you eat at home or at restaurants. Are restaurants better than eating at home?" }, 2800)
+setTimeout(function() { document.getElementById("single09").value = "Talk about <u>the meals you eat during the day</u>, including the different meals, the times or frequency, any ingredients, desserts, drinks, seasonings or condiments, etc." }, 2900)
+setTimeout(function() { document.getElementById("single10").value = "<u>Describe the meals or dishes you eat when you are very hungry</u>, including the names, the types of meal, why you like them, how often you eat them, the main ingredients, etc." }, 3000)
+setTimeout(function() { document.getElementById("single11").value = "<u>Talk about all your favorite healthy food</u>. Mention why you like it, when and where you eat it, how often you eat it, etc. What are the main ingredients? How do you prepare it?" }, 3100)
+setTimeout(function() { document.getElementById("single12").value = "<u>Talk about all the delicious snacks you know that are good for you</u>. Mention what they are, why you like it, how often you eat it, etc. What are the main ingredients? In what format or containers do they come?" }, 3200)
+setTimeout(function() { document.getElementById("single13").value = "<u>Talk about all the vegetables you know</u>. Mention the names, why you like them, how often you eat them, etc. What are the main ingredients? In what format or containers do they come?" }, 3300)
+setTimeout(function() { document.getElementById("single14").value = "Talk about the <u>prepared meals or dishes you eat when you are very hungry</u>. Mention the names, why you like them, what the main ingredients are, if you eat them for breakfast, lunch or dinner, etc." }, 3400)
+// ERASE THE REST!
+document.getElementById("single15").value = ""
+document.getElementById("single16").value = ""
+document.getElementById("single17").value = ""
+document.getElementById("single18").value = ""
+document.getElementById("single19").value = ""
+document.getElementById("single20").value = ""
+
+// RESETTING QUESTION WINDOW!
+setTimeout(function() { document.getElementById("questions").style.display = "none" }, 4000)
+setTimeout(function() { document.getElementById("resultone").innerHTML = "Food questions ready (individial)!" }, 4500)
+setTimeout(function() { document.getElementById("resultpairs").innerHTML = "Pairwork is still empty!" }, 5000)
+setTimeout(function() { document.getElementById("alertInstructions").style.display = "block" }, 5500)
+}
+
+
 // DELETE INDIVIDUAL QUESTIONS
-function deleteSingle () {
+function deleteSingle() {
 let Individual = document.querySelectorAll("input.individual-input")
 for(let singleTask of Individual) { singleTask.value = "" }
 }
 
 // DELETE PAIRWORK QUESTIONS
-function deleteDouble () {
+function deleteDouble() {
 let Pairwork = document.querySelectorAll("input.pairwork-input")
 for(let doubleTask of Pairwork) { doubleTask.value = "" }
 }
 
 
+
 // BREAKING THE CLIPBOARD DATA INTO THE DIFFERENT INPUTS!
 function pasteQuestions() {
 // GETTING AN ARRAY WITH ALL THE INPUTS!
- let singleFields = document.getElementsByClassName('individual-input');
- let doubleFields = document.getElementsByClassName('pairwork-input');
+ let singleFields = document.getElementsByClassName('individual-input')
+ let doubleFields = document.getElementsByClassName('pairwork-input')
 
 // Assign input 0 a listener for the onpaste event
-singleFields[0].onpaste = function(event) {
+ singleFields[0].onpaste = function(event) {
  event.preventDefault()
  let allValues = event.clipboardData.getData('Text').split(/\r?\n/)  // Split data on newline!
  for(var i = 0; i < allValues.length; i++) { singleFields[i].value = allValues[i] } // Cycling the values
  }
-
 // Assign input 0 a listener for the onpaste event
-doubleFields[0].onpaste = function(event) {
+ doubleFields[0].onpaste = function(event) {
  event.preventDefault()
  let allValues = event.clipboardData.getData('Text').split(/\r?\n/)  // Split data on newline!
  for(var i = 0; i < allValues.length; i++) { doubleFields[i].value = allValues[i] } // Cycling the values
  }
-
 }
 </script>
 
