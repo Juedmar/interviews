@@ -283,6 +283,49 @@ setTimeout(function() { document.getElementById("alertInstructions").style.displ
 }
 
 
+
+// =========================
+// MODAL VERB QUESTIONS
+// =========================
+
+function modalVerbQuestions() {
+// DELETE PREVIOUS STUFF!
+deleteSingle()
+deleteDouble()
+
+// PRINT "READY TO GO"!
+document.getElementById("resultone").style.color = "black"
+document.getElementById("resultpairs").style.color = "black"
+
+// OPENING QUESTION WINDOW!
+document.getElementById("resultone").innerHTML = "Adding Modal Verb questions!"
+setTimeout(function() { document.getElementById("questions").style.display = "block" }, 1000)
+
+// ADDING INDIVIDUAL QUESTIONS!
+setTimeout(function() { document.getElementById("single01").value = "Talk about <u>what a person has do to be happy.</u> Why?" }, 2100)
+setTimeout(function() { document.getElementById("single02").value = "Talk about what <u>activities you recommend to stay healthy.</u> Explain." }, 2200)
+setTimeout(function() { document.getElementById("single03").value = "Talk about <u>what students have to do if they want to improve their English.</u>" }, 2300)
+setTimeout(function() { document.getElementById("single04").value = "Talk about <u>some of the things a person has to do to become successful.</u> Why?" }, 2400)
+setTimeout(function() { document.getElementById("single05").value = "Talk about <u>some necessary foods people have to eat at least once a week.</u> Why?" }, 2500)
+setTimeout(function() { document.getElementById("single06").value = "Talk about <u>some things you must or must not do at your job or university.</u> Explain." }, 2600)
+setTimeout(function() { document.getElementById("single07").value = "Talk about <u>some things you must do or must not do when you go to the airport.</u> Explain." }, 2700)
+setTimeout(function() { document.getElementById("single08").value = "Talk about <u>some interesting customs & traditions people have to follow in this country.</u> Explain." }, 2800)
+setTimeout(function() { document.getElementById("single09").value = "What <u>health advice and recommendation has a friend</u>, or someone in your family, <u>ever told you that helps you stay fit and healthy</u>?" }, 2900)
+setTimeout(function() { document.getElementById("single10").value = "What <u>can you do on Friday nights?</u> Talk about what you usually do at the end of the week, including what you can / can't do, frequency, times, locations, etc." }, 3000)
+setTimeout(function() { document.getElementById("single11").value = "What <u>can you usually do in the summer?</u> Talk about what you usually do in the hot/sunny months, including what you can / can't do, frequency, times, locations, etc." }, 3100)
+setTimeout(function() { document.getElementById("single12").value = "What <u>can you usually do in the winter?</u> Talk about what you usually do in the cold/rainy months, including what you can / can't do, frequency, times, locations, etc." }, 3200)
+setTimeout(function() { document.getElementById("single13").value = "What <u>can you usually do when you are young?</u> Talk about what you usually do after turning 40/50, including what you can / can't do, frequency, times, locations, etc." }, 3300)
+setTimeout(function() { document.getElementById("single14").value = "What <u>can you usually do when you are sick?</u> Talk about what you usually do when you have a the flue/acold, including what you can / can't do, frequency, times, locations, etc." }, 3400)
+
+// RESETTING QUESTION WINDOW!
+setTimeout(function() { document.getElementById("questions").style.display = "none" }, 4000)
+setTimeout(function() { document.getElementById("resultone").innerHTML = "Modal Verb questions ready (individial)!" }, 4500)
+setTimeout(function() { document.getElementById("resultpairs").innerHTML = "Pairwork is still empty!" }, 5000)
+setTimeout(function() { document.getElementById("alertInstructions").style.display = "block" }, 5500)
+}
+
+
+
 // =========================
 // FOOD & COOKING QUESTIONS
 // =========================

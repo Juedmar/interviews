@@ -60,6 +60,7 @@
   <span class="template-icons" title="Present Perfect Questions" onclick="presentPerfectCheck()">🕰️</span>
   <span class="template-icons" title="Future Tense Questions" onclick="futureTenseCheck()">🔮</span>
   <span class="template-icons" title="Conditional Questions" onclick="conditionalsCheck()">🤔</span>
+  <span class="template-icons" title="Modal Verb Questions" onclick="modalsCheck()">💡</span>
   <span class="template-icons" title="Coomparative & Superlative Questions" onclick="comparativesCheck()">⚖️</span>
   <span class="template-icons" title="Food & Meals Questions" onclick="foodQuestionsCheck()">🍔</span>
    <!-- HOVERING TOOLTIP -->
@@ -287,6 +288,9 @@ if (confirm("CONFIRM:\nEnter Conditional questions?\nPrevious questions will be 
 function comparativesCheck() {
 if (confirm("CONFIRM:\nEnter Comparative & Superlative questions?\nPrevious questions will be deleted!")) { comparativeQuestions() }}
 
+function modalsCheck() {
+if (confirm("CONFIRM:\nEnter Modal Verb questions?\nPrevious questions will be deleted!")) { modalVerbQuestions() }}
+
 function foodQuestionsCheck() {
 if (confirm("CONFIRM:\nEnter Food & Cooking questions?\nAll previous questions will be deleted!")) { foodQuestions() }}
 
@@ -330,7 +334,6 @@ function pasteQuestions() {
 
 <script type="text/javascript" src="files/questions.js">
 </script>
-
 
 
 </html>
