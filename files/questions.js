@@ -38,6 +38,10 @@ setTimeout(function() { document.getElementById("questions").style.display = "no
 setTimeout(function() { document.getElementById("resultone").innerHTML = "Present Simple questions ready (individial)!" }, 4500)
 setTimeout(function() { document.getElementById("resultpairs").innerHTML = "Pairwork is still empty!" }, 5000)
 setTimeout(function() { document.getElementById("alertInstructions").style.display = "block" }, 5500)
+
+// BUTTON TITLE CHANGE!
+setTimeout(function() { document.getElementById("selectone").innerHTML = "↓ 👤 Individual topic ↓" }, 5800)
+setTimeout(function() { document.getElementById("selectpairs").innerHTML = "↓ 👥 Pairwork topic ↓" }, 6000)
 }
 
 
@@ -92,6 +96,10 @@ setTimeout(function() { document.getElementById("questions").style.display = "no
 setTimeout(function() { document.getElementById("resultone").innerHTML = "Individual questions ready (Past Simple)!" }, 5500)
 setTimeout(function() { document.getElementById("resultpairs").innerHTML = "Pairwork questions ready (Past Simple)!" }, 6000)
 setTimeout(function() { document.getElementById("alertInstructions").style.display = "block" }, 6500)
+
+// BUTTON TITLE CHANGE!
+setTimeout(function() { document.getElementById("selectone").innerHTML = "↓ 👤 Individual topic ↓" }, 6800)
+setTimeout(function() { document.getElementById("selectpairs").innerHTML = "↓ 👥 Pairwork topic ↓" }, 7000)
 }
 
 
@@ -131,6 +139,10 @@ setTimeout(function() { document.getElementById("questions").style.display = "no
 setTimeout(function() { document.getElementById("resultone").innerHTML = "Present Perfect questions ready (individial)!" }, 4400)
 setTimeout(function() { document.getElementById("resultpairs").innerHTML = "Pairwork is still empty!" }, 5000)
 setTimeout(function() { document.getElementById("alertInstructions").style.display = "block" }, 5500)
+
+// BUTTON TITLE CHANGE!
+setTimeout(function() { document.getElementById("selectone").innerHTML = "↓ 👤 Individual topic ↓" }, 5800)
+setTimeout(function() { document.getElementById("selectpairs").innerHTML = "↓ 👥 Pairwork topic ↓" }, 6000)
 }
 
 
@@ -170,6 +182,10 @@ setTimeout(function() { document.getElementById("questions").style.display = "no
 setTimeout(function() { document.getElementById("resultone").innerHTML = "Future Tense questions ready (individial)!" }, 4500)
 setTimeout(function() { document.getElementById("resultpairs").innerHTML = "Pairwork is still empty!" }, 5000)
 setTimeout(function() { document.getElementById("alertInstructions").style.display = "block" }, 5500)
+
+// BUTTON TITLE CHANGE!
+setTimeout(function() { document.getElementById("selectone").innerHTML = "↓ 👤 Individual topic ↓" }, 5800)
+setTimeout(function() { document.getElementById("selectpairs").innerHTML = "↓ 👥 Pairwork topic ↓" }, 6000)
 }
 
 
@@ -225,6 +241,10 @@ setTimeout(function() { document.getElementById("questions").style.display = "no
 setTimeout(function() { document.getElementById("resultone").innerHTML = "1st Conditional questions ready!" }, 5500)
 setTimeout(function() { document.getElementById("resultpairs").innerHTML = "2nd Conditional questions ready!" }, 6000)
 setTimeout(function() { document.getElementById("alertInstructions").style.display = "block" }, 6500)
+
+// BUTTON TITLE CHANGE!
+setTimeout(function() { document.getElementById("selectone").innerHTML = "↓ First Conditional ↓" }, 6800)
+setTimeout(function() { document.getElementById("selectpairs").innerHTML = "↓ Second Conditional ↓" }, 7000)
 }
 
 
@@ -280,6 +300,10 @@ setTimeout(function() { document.getElementById("questions").style.display = "no
 setTimeout(function() { document.getElementById("resultone").innerHTML = "Comparative questions ready!" }, 5500)
 setTimeout(function() { document.getElementById("resultpairs").innerHTML = "Superlative questions ready!" }, 6000)
 setTimeout(function() { document.getElementById("alertInstructions").style.display = "block" }, 6500)
+
+// BUTTON TITLE CHANGE!
+setTimeout(function() { document.getElementById("selectone").innerHTML = "↓ 👤 Comparatives ↓" }, 6800)
+setTimeout(function() { document.getElementById("selectpairs").innerHTML = "↓ 👥 Superlatives ↓" }, 7000)
 }
 
 
@@ -322,6 +346,10 @@ setTimeout(function() { document.getElementById("questions").style.display = "no
 setTimeout(function() { document.getElementById("resultone").innerHTML = "Modal Verb questions ready (individial)!" }, 4500)
 setTimeout(function() { document.getElementById("resultpairs").innerHTML = "Pairwork is still empty!" }, 5000)
 setTimeout(function() { document.getElementById("alertInstructions").style.display = "block" }, 5500)
+
+// BUTTON TITLE CHANGE!
+setTimeout(function() { document.getElementById("selectone").innerHTML = "↓ 👤 Individual topic ↓" }, 5800)
+setTimeout(function() { document.getElementById("selectpairs").innerHTML = "↓ 👥 Pairwork topic ↓" }, 6000)
 }
 
 
@@ -356,7 +384,7 @@ setTimeout(function() { document.getElementById("single09").value = "Talk about 
 setTimeout(function() { document.getElementById("single10").value = "<u>Describe the meals or dishes you eat when you are very hungry</u>, including the names, the types of meal, why you like them, how often you eat them, the main ingredients, etc." }, 3000)
 setTimeout(function() { document.getElementById("single11").value = "<u>Talk about all your favorite healthy food</u>. Mention why you like it, when and where you eat it, how often you eat it, etc. What are the main ingredients? How do you prepare it?" }, 3100)
 setTimeout(function() { document.getElementById("single12").value = "<u>Talk about all the delicious snacks you know that are good for you</u>. Mention what they are, why you like it, how often you eat it, etc. What are the main ingredients? In what format or containers do they come?" }, 3200)
-setTimeout(function() { document.getElementById("single13").value = "<u>Talk about all the vegetables you know</u>. Mention the names, why you like them, how often you eat them, etc. What are the main ingredients? In what format or containers do they come?" }, 3300)
+setTimeout(function() { document.getElementById("single13").value = "<u>Talk about all the vegetables you know</u>. Mention the names, why you like them, how often you eat them, etc. What are the main characteristics? In what format or containers do they come?" }, 3300)
 setTimeout(function() { document.getElementById("single14").value = "Talk about the <u>prepared meals or dishes you eat when you are very hungry</u>. Mention the names, why you like them, what the main ingredients are, if you eat them for breakfast, lunch or dinner, etc." }, 3400)
 
 // RESETTING QUESTION WINDOW!
@@ -364,4 +392,8 @@ setTimeout(function() { document.getElementById("questions").style.display = "no
 setTimeout(function() { document.getElementById("resultone").innerHTML = "Food questions ready (individial)!" }, 4500)
 setTimeout(function() { document.getElementById("resultpairs").innerHTML = "Pairwork is still empty!" }, 5000)
 setTimeout(function() { document.getElementById("alertInstructions").style.display = "block" }, 5500)
+
+// BUTTON TITLE CHANGE!
+setTimeout(function() { document.getElementById("selectone").innerHTML = "↓ 👤 Individual topic ↓" }, 5800)
+setTimeout(function() { document.getElementById("selectpairs").innerHTML = "↓ 👥 Pairwork topic ↓" }, 6000)
 }
